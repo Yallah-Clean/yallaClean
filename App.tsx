@@ -9,10 +9,17 @@ import VerifyCodeScreen from './screens/VerifyCode';
 import SignUpScreen from './screens/SignUp';
 import ResidentRegScreen from './screens/ResidentReg';
 import CollectorRegScreen from './screens/CollectorReg';
+import YallaCleanTokenService from './service/YallaCleanToken.js';
 
 
 const Stack = createStackNavigator();
 export default function App() {
+  const token = new YallaCleanTokenService();
+  const test=(async ()=>{
+const name=    await token.name()
+console.log( name,'token name');
+
+  })();
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="CollectorReg">
