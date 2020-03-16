@@ -22,7 +22,7 @@ console.log( name,'token name');
   })();
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="CollectorReg">
+      <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={HomeScreen}></Stack.Screen>
         <Stack.Screen name="SignIn" component={SignInScreen}></Stack.Screen>
         <Stack.Screen name="ForgotPassword" component={ForgotPasswordScreen}></Stack.Screen>

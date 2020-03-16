@@ -4,7 +4,7 @@ import { Container, Grid, View, Content, Header, Text, Thumbnail, Row, Form, Ite
 
 
 
-function SignUpScreen(){
+function SignUpScreen({ navigation }){
     const Url = require('../assets/logo1.png');
     return (
         <Container>
@@ -18,11 +18,11 @@ function SignUpScreen(){
                     </Content>
                 </View>
                 <Row style={{ justifyContent:'space-between' , alignItems:'center' , borderColor:'#455' }}>
-                    <Button transparent light>
+                    <Button onPressIn ={() => navigation.navigate('CollectorReg')} transparent light>
                         <Text style={{color:'#A5604F' , fontFamily:'Rosario' , fontStyle:'normal' , fontWeight:'bold' , fontSize:16 , lineHeight:19 , textAlign:'center'}}>As Collector</Text>
                     </Button>
 
-                    <Button transparent light>
+                    <Button onPressIn ={() => navigation.navigate('ResidentReg')} transparent light>
                         <Text style={{color:'#A5604F' , fontFamily:'Rosario' , fontStyle:'normal' , fontWeight:'bold' , fontSize:16 , lineHeight:19 , textAlign:'center'}}>As Resident</Text>
                     </Button>
                 </Row>

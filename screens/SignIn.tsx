@@ -2,7 +2,7 @@
 import React from 'react';
 import { Container,Header, Grid, Row, Content, Button, Text, Thumbnail, Form, Item, Input, Icon, Col, ListItem, Body, CheckBox } from 'native-base';
 
-const SignInScreen = () => {
+const SignInScreen = ({ navigation}) => {
     const Url = require('../assets/logo2.jpg');
     return(        
         <Container>
@@ -18,12 +18,12 @@ const SignInScreen = () => {
                         <Item  rounded>
                             
                             <Input placeholder="Username" style={{ width:300}} />
-                            <Icon active name="person"></Icon>
+                            <Icon  name="person"></Icon>
                         </Item>
                         <Item floatingLabel rounded>
                         
                             <Input placeholder="password" style={{ width:300}} />
-                            <Icon active name="lock" ></Icon>
+                            <Icon  name="lock" ></Icon>
                         </Item>
                         <Row>
                             <Col>
@@ -35,7 +35,7 @@ const SignInScreen = () => {
                                 </ListItem>
                             </Col>
                             <Col>
-                            <Button style={{width:180}} transparent >
+                            <Button onPressIn ={() => navigation.navigate('ForgotPassword')} style={{width:180}} transparent >
                                 <Text style={{color:'red'}}>Forgot Password?</Text>
                             </Button>
                             </Col>
@@ -44,12 +44,12 @@ const SignInScreen = () => {
                 </Row>
                 <Row style={{  justifyContent:'center'  }}>
                     <Col style={{ alignItems:'center'}}>
-                        <Button style={{position:'relative' , top:50 , backgroundColor:'#a2beaa' , width:90 , borderRadius:15}}>
+                        <Button onPressIn ={() => navigation.navigate('SignIn')} style={{position:'relative' , top:50 , backgroundColor:'#a2beaa' , width:90 , borderRadius:15}}>
                             <Text>SignIn</Text>
                         </Button>
                     </Col>
                     <Col style={{ alignItems:'center'}}>
-                        <Button style={{ position:'relative' , top:50,  backgroundColor:'#fff' , width:90 , borderColor:'#a2beaa' , borderStyle:'solid' , borderWidth:2 ,  borderRadius:15}} >
+                        <Button onPressIn ={() => navigation.navigate('SignUp')} style={{ position:'relative' , top:50,  backgroundColor:'#fff' , width:90 , borderColor:'#a2beaa' , borderStyle:'solid' , borderWidth:2 ,  borderRadius:15}} >
                             <Text style={{color:'#a2beaa'}}>SignUp</Text>
                         </Button>
                     </Col>
