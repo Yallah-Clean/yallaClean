@@ -8,12 +8,17 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@material-ui/core": "^4.9.7",
+    "@material-ui/icons": "^4.9.1",
     "@react-native-community/masked-view": "^0.1.7",
     "@react-navigation/native": "^5.0.9",
     "@react-navigation/stack": "^5.1.1",
     "@truffle/contract": "^4.1.8",
+    "@truffle/hdwallet-provider": "^1.0.33",
     "axios": "^0.19.2",
     "expo": "~36.0.0",
+    "fortmatic": "^2.0.5",
+    "keythereum": "^1.0.4",
     "native-base": "^2.13.8",
     "react": "~16.9.0",
     "react-dom": "~16.9.0",
@@ -25,7 +30,8 @@
     "react-native-safe-area-context": "^0.7.3",
     "react-native-screens": "^2.2.0",
     "react-native-web": "~0.11.7",
-    "web3": "^1.2.6"
+    "truffle-hdwallet-provider-privkey": "^1.0.3",
+    "web3": "^1.0.0-beta.36"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",

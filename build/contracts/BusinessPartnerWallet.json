@@ -1055,9 +1055,9 @@
     "name": "solc",
     "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
   },
-  "networks": {},
-  "schemaVersion": "3.0.21",
-  "updatedAt": "2020-03-14T16:25:06.270Z",
+  "networks": {}, "networkType": "quorum",
+  "schemaVersion": "3.0.23",
+  "updatedAt": "2020-03-19T02:57:26.720Z",
   "devdoc": {
     "methods": {
       "isOwner()": {

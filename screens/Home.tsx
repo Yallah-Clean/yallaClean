@@ -8,7 +8,7 @@ const HomeScreen = ({ navigation}) => {
     return(
         <View style={styles.container}>
           <Image style={{width:300 , height:300}} source={require('../assets/splashLogo.png')}></Image>
-          <TouchableOpacity    onPress={() => {navigation.navigate('SignIn')}} >
+          <TouchableOpacity    onPress={() => {navigation.navigate('ResidentReg')}} >
             <View style={styles.button}>
               <Text style={styles.buttonText}>
                   Let's Get Going

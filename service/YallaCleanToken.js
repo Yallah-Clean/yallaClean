@@ -3,14 +3,14 @@ import web3 from 'web3';
 import contract from '@truffle/contract';
 
 import contractArtifact from '../build/contracts/YallaCleanToken.json';
+const provider = require('./web3.endpoint.js');
 
 export default class YallaCleanTokenService{
 
 constructor() { 
 
-this.web3Provider = new web3.providers.HttpProvider(
-'https://ropsten.infura.io/v3/a30f44f7f6de4a7dbe4c9ad2eea7420e'
-);
+this.web3Provider = new Web3.providers.HttpProvider(provider.webProvider);
+
 
 this.web3 = new web3(this.web3Provider);
 

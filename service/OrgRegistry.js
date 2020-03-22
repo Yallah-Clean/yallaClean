@@ -1,23 +1,26 @@
 
 import web3 from 'web3';
 import contract from '@truffle/contract';
+const PrivateKeyProvider = require("@truffle/hdwallet-provider");
 
 import contractArtifact from '../build/contracts/OrgRegistry.json';
-
+const provider = require('./web3.endpoint.js');
 export default class OrgRegistryService{
 
-constructor() { 
+constructor(privateKey) { 
 
-this.web3Provider = new web3.providers.HttpProvider(
-'https://ropsten.infura.io/v3/a30f44f7f6de4a7dbe4c9ad2eea7420e'
-);
+  this.web3Provider =  new PrivateKeyProvider(privateKey, provider.webProvider);
+
+  // this.web3Provider = new Web3.providers.HttpProvider(provider.webProvider);
 
 this.web3 = new web3(this.web3Provider);
 
 this.initContract().then(s => {});
 
 }
-
+getContractAddress(){
+  return '0xBD682775b8Fbcf8E5Fb81bF2249879CAeD12dAbB';
+}
 async initContract() {
 
 this.service = contract(contractArtifact);
@@ -80,9 +83,12 @@ return data;
 return data;
 
 }
-  async residentRate( contractAddress){
+  async getResidentRate( contractAddress){
 
  const instance = await this.service.at( contractAddress); 
+console.log(
+  instance,'instance'
+);
 
  const data = await instance.residentRate.call();
 
